@@ -1,17 +1,12 @@
-// Task 2 Component
 import WelcomeMessage from './components/WelcomeMessage';
-
-// Task 3 Components
-import Header from './specific/Header';
-import MainContent from './specific/MainContent';
-import Footer from './specific/Footer';
-
-// Task 4 Component
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
 
 function App() {
   return (
-    <div>
+    <div style={{ fontFamily: 'Arial, sans-serif', margin: '0', padding: '0' }}>
       {/* Task 2: JSX Practice */}
       <WelcomeMessage />
 
@@ -20,11 +15,11 @@ function App() {
       <MainContent />
       <Footer />
 
-      {/* Task 4: User Profiles */}
-      <UserProfile name="Alice" age={25} bio="Loves hiking and photography" />
-      <UserProfile name="Bob" age={30} bio="Enjoys painting and cooking" />
+      {/* Task 4: UserProfile */}
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
     </div>
   );
 }
 
 export default App;
+
