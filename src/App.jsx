@@ -1,3 +1,4 @@
+import Counter from './components/Counter';
 import WelcomeMessage from './components/WelcomeMessage';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <MainContent />
       <Footer />
+      <Counter />
 
       {/* Task 4: UserProfile */}
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
