@@ -13,7 +13,7 @@ export default function PostsComponent() {
     queryKey: ["posts"],
     queryFn: fetchPosts,
     staleTime: 5000,
-    cacheTime: 300000,
+    gcTime: 300000,
   });
 
   if (isLoading) return <p>Loading posts...</p>;
