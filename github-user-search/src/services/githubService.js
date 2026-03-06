@@ -1,8 +1,15 @@
 import axios from "axios";
 
-const BASE_URL = "https://api.github.com";
+export const searchUsers = async (username, location, repos) => {
+  let query = "";
 
-export const fetchUserData = async (username) => {
-  const response = await axios.get(`${BASE_URL}/users/${username}`);
+  if (username) query += `${username}`;
+  if (location) query += `+location:${location}`;
+  if (repos) query += `+repos:>=${repos}`;
+
+  const response = await axios.get(
+    `https://api.github.com/search/users?q=${query}`
+  );
+
   return response.data;
 };
